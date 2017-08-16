@@ -1,0 +1,76 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-battery-status": {
+            "PACKAGE_NAME": "pro.disruptive.magiccounter"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "pro.disruptive.magiccounter"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "pro.disruptive.magiccounter"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "pro.disruptive.magiccounter"
+        },
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "pro.disruptive.magiccounter"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "pro.disruptive.magiccounter"
+        },
+        "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "pro.disruptive.magiccounter"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "pro.disruptive.magiccounter"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "pro.disruptive.magiccounter"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "pro.disruptive.magiccounter"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "pro.disruptive.magiccounter"
+        },
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "pro.disruptive.magiccounter"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "pro.disruptive.magiccounter"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "pro.disruptive.magiccounter"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "pro.disruptive.magiccounter"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "pro.disruptive.magiccounter"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "pro.disruptive.magiccounter"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "pro.disruptive.magiccounter"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "pro.disruptive.magiccounter"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "pro.disruptive.magiccounter"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "pro.disruptive.magiccounter"
+        }
+    }
+}

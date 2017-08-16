@@ -1,0 +1,506 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	overflow: hidden;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* custom Styles */ 
+body,
+html,
+body>div {
+	height: 100%;
+	font-family: 'alegreyaregular', serif;
+	font-weight: normal;
+}
+
+h1,h2,h3,h4,h5 {
+	font-family: 'alegreyaregular', serif;
+}
+
+.playerfield {
+	position:fixed;
+	top:0;
+	bottom:0;
+	width: 100%;
+	height:100%;
+}
+
+.player-wrapper {
+	height: 50%;
+	/* width: 100%; */
+	background: url(../images/artifactbg.png) #a7a7a7;
+	background-size: cover;
+	border-radius: -20px;
+	position: relative;
+	padding-top: 1px;
+	
+}
+
+.player-header {
+	font-size: 2em;
+	background: #fff;
+	padding: 1px;
+	position: relative;
+	margin: 0.1em 0.2em 0.2em;
+	border-radius: 8px 8px 2px 2px;
+}
+
+.player-header-inner{
+	border-radius: 8px 8px 4px 4px;
+	background: rgba(51, 51, 51, 0.08);
+	margin: -1px;
+	box-shadow: -1px 2px 3px rgba(0, 0, 0, 0.56);
+	border-top: 2px solid #fff;
+	border-right: 2px solid #fff;
+	border-bottom: 2px inset rgba(0, 0, 0, 0.16);
+	border-left: 2px inset rgba(0, 0, 0, 0.16);
+}
+
+.player-header input {
+	font-size: 0.8em;
+	font-family: 'alegreyaregular', serif;
+	margin: 0 1em 0 0.3em;
+	padding: 0;
+	background:transparent;
+	border: 0;
+	width: 98%;
+}
+
+.player-one .player-header input:focus {
+	transform: rotate(180deg);
+}
+
+.colors {
+	position: absolute;
+	top: 6px;
+	right: 12px;
+	display: none;
+}
+
+.colors span {
+	display: inline-block;
+	height: 12px;
+	width: 12px;
+	background: #000;
+}
+
+.counters-field  {
+	background: rgba(255, 255, 255, 0.79);
+	padding: 1px;
+	position: relative;
+	height: 78%;
+	margin: 0.3em;
+	border-radius: 13px;
+	/* border: 2px solid #333; */
+	box-shadow: -1px 2px 3px rgba(0, 0, 0, 0.56);
+}
+
+.counters-field-inner {
+	border: 2px solid #b3b3b3;
+	border-top: 2px solid #fcfcfc;
+	border-left: 8px inset #ffffff;
+	border-right: 4px solid #fafafa;
+	height: auto;
+	border-radius: 10px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.lifecounter {
+	position: absolute;
+	right: 1em;
+	top: 0.5em;
+}
+
+.lifecounter h2 {
+	font-size: 5em;
+	width: 2em;
+	height: 1.2em;
+	text-align: center;
+	margin-bottom: 0.1em;
+	background: url(../images/life-bg.svg) no-repeat center center;
+	background-size: 100% 111%;
+	color: #fff;
+	position: relative;
+	z-index: 40;
+	pointer-events: none;
+}
+
+.lifecounter button {
+	font-size: 28px;
+	width: 50%;
+	float:left;
+	background: #000;
+	padding: 0 6%;
+	border: 0;
+	position: absolute;
+	bottom: 2px;
+	text-align: left;
+	z-index: 20;
+	border-radius: 4px 0 0 4px;
+	color: #fff;
+	border: 2px solid rgba(192, 142, 47, 0.81);
+	outline: none;
+}
+
+.lifecounter button:active {
+	opacity: 0.8;
+}
+
+.lifecounter .minus {
+	text-align: right;
+	right: 0;
+	border-radius: 0 4px 4px 0;
+}
+
+
+.counter-bar {
+	position: absolute;
+	/* background: rgba(51, 51, 51, 0.86); */
+	bottom: 1em;
+	top: 0.5em;
+	width: 10%;
+	padding-top: 0.5em;
+	left: -0.5em;
+}
+
+.counter-bar .counter {
+	width: 0vh;
+	background: rgba(255, 255, 255, 0.73);
+	padding: 0.4em 0;
+	position: relative;
+	margin-bottom: 1em;
+	/* padding-right: 24px; */
+	text-align: right;
+	white-space: nowrap;
+	transition: 0.4s cubic-bezier(0, 0, 0.2, 1) all;
+	text-align: left;
+	padding-left: 0.2em;
+	padding-right: 0.5em;
+}
+
+.counter.open {
+	width: 19vh;
+	padding: 0.4em 0;
+    padding-right: 0em;
+}
+
+.counter-bar span {
+	font-size: 1.6em;
+}
+
+
+
+.counter a {
+	width: 2em;
+	display: block;
+	position: absolute;
+	right: -40px;
+	top: -10px;
+	background: url(../images/arrow.svg) no-repeat;
+	color: #fff;
+	height: 2.7em;
+	padding: 0.8em;
+	font-size: 16px;
+}
+
+.counter img {
+	width: 1.5em;
+	position: absolute;
+	left: 10px;
+}
+
+.energy.counter img {
+	top: 1.1em;
+}
+
+.poison.counter img {
+	top: 0.6em;
+}
+
+.walker.counter img {
+	top: 1.1em;
+}
+
+.counter button {
+	
+}
+
+.counter span {
+	transition: all 0s ease;
+	opacity:0;
+	font-size: 2em;
+}
+
+.counter.open button {
+	opacity:1;
+	transition: all 0.4s ease;
+	transition-delay: 0.3s;
+	pointer-events: initial;
+}
+
+.counter button {
+	transition: all 0s ease;
+	opacity:0;
+	pointer-events: none;
+	font-size: 0.8em;
+	padding: 0.5em 1em;
+	background: #be5c5f;
+	border: 0;
+	border-radius: 30px;
+	margin: 0 0.2em;
+	position: relative;
+	top: -6px;
+}
+
+.counter.open span {
+	opacity:1;
+	transition: all 0.4s ease;
+	transition-delay: 0.3s;
+	font-size: 2em;
+}
+
+.dice {
+	height: 4.5em;
+	width: 4.5em;
+	background: url(../images/icosahedron-filled.png) no-repeat;
+	background-size: cover;
+	position: absolute;
+	bottom: 0.9em;
+	right: 1em;
+	color: #000;
+	text-align: center;
+	/* font-size: 5em; */
+}
+.dice p {
+	font-size: 3em;
+	margin-top: 0.2em;
+	/* text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.43); */
+}
+.player-one {
+	transform: rotate(180deg);
+	
+}
+
+.restart {
+	width: 3em;
+	margin-left: -3em;
+	position:fixed;
+	top: 45.5%;
+	z-index:9999;
+	left: 50%;
+	background: #999;
+	border: 0.2em solid #8e8e8e;
+	border-left: 0.8em solid #8e8e8e;
+	border-right: 0.8em solid #8e8e8e;
+	border-radius: 360px;
+	box-sizing: content-box;
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+	outline: none;
+}
+
+.restart:active,
+.restart:active img {
+	opacity: 0.8;
+	-webkit-filter: brightness(150%);
+	filter: brightness(150%);
+	
+}
+
+.restart img {
+	width: 100%;
+	margin-top: 5px;
+}
+
+@media (min-width: 321px) {
+	.counter-bar .counter {
+		margin-bottom: 2em;
+
+	}
+
+	.counter-bar .counter.open {
+		padding: 0.4em 0.3em;
+		padding-right: 0em;
+	}
+	
+	
+	.lifecounter h2 {
+		font-size: 6em;
+	}
+
+	.dice {
+		height: 5.5em;
+		width: 5.5em;
+	}
+	.dice p {
+		font-size: 4em;
+		margin-top: 0.12em;
+	}
+}
+
+@media (min-width: 376px) {
+	.counter-bar .counter {
+		margin-bottom: 1.6em;
+		padding: 0.5em 0;
+		/* padding-left: 0.2em; */
+		padding-right: 0.5em;
+		text-align: center;
+		font-size: 1.2em;
+	}
+
+	.counter-bar .counter.open {
+		padding: 0.5em 0;
+		/* padding-left: 0.2em; */
+		padding-right: 0.5em;
+	}
+
+	.counter a {
+		width: 2em;
+		height: 3.7em;
+	}
+
+	.counter img {
+		width: 1.8em;
+		position: absolute;
+		left: 10px;
+		top: 1.1em;
+	}
+
+	.energy.counter img {
+		top: 1.5em;
+	}
+
+	.poison.counter img {
+		top: 0.8em;
+	}
+
+	.walker.counter img {
+		top: 1.1em;
+	}
+
+	.lifecounter {
+		top: 2em;
+	}
+
+}
+
+@media (min-width: 768px) {
+	.player-header {
+		margin: 0.2em 0.6em 0.2em;
+	}
+	.counters-field {
+		margin: 1em;
+	}
+	
+	.counter-bar .counter {
+		margin-bottom: 1.7em;
+		padding: 0.5em 0;
+		padding-left: 0px;
+		padding-right: 0.9em;
+		text-align: center;
+		font-size: 1.6em;
+	}
+
+	.counter.open {
+    	width: 25vh;
+ }
+
+	.counter a {
+		width: 3em;
+		height: 5.7em;
+		top: -15px;
+	}
+
+	.counter img {
+		width: 1.8em;
+		position: absolute;
+		left: 20px;
+		top: 1.8em;
+	}
+
+	.energy.counter img {
+		top: 2.5em;
+	}
+
+	.poison.counter img {
+		top: 1.2em;
+		width: 51%;
+	}
+
+	.walker.counter img {
+		top: 1.1em;
+	}
+
+	.lifecounter {
+		/* top: 2em; */
+		right: 2em;
+	}
+
+	.lifecounter h2 {
+		font-size: 12em;
+	}
+
+	.dice {
+		height: 5.5em;
+		width: 5.5em;
+	}
+	.dice p {
+		font-size: 4em;
+		margin-top: 0.12em;
+	}
+
+	.restart {
+		width: 4em;
+		top: 47%;
+		border-left: 1.8em solid #8e8e8e;
+		border-right: 1.8em solid #8e8e8e;
+		margin-left: -4em;
+	}
+}

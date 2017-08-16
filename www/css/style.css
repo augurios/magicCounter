@@ -53,7 +53,12 @@ body,
 html,
 body>div {
 	height: 100%;
-	font-family: 'Alegreya', serif;
+	font-family: 'alegreyaregular', serif;
+	font-weight: normal;
+}
+
+h1,h2,h3,h4,h5 {
+	font-family: 'alegreyaregular', serif;
 }
 
 .playerfield {
@@ -97,7 +102,7 @@ body>div {
 
 .player-header input {
 	font-size: 0.8em;
-	font-family: 'Alegreya', serif;
+	font-family: 'alegreyaregular', serif;
 	margin: 0 1em 0 0.3em;
 	padding: 0;
 	background:transparent;
@@ -492,10 +497,10 @@ body>div {
 	}
 
 	.restart {
-	width: 4em;
-	top: 47%;
-	border-left: 1.8em solid #8e8e8e;
-	border-right: 1.8em solid #8e8e8e;
-	margin-left: -4em;
+		width: 4em;
+		top: 47%;
+		border-left: 1.8em solid #8e8e8e;
+		border-right: 1.8em solid #8e8e8e;
+		margin-left: -4em;
 	}
 }

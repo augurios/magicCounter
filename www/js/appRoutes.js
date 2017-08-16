@@ -1,4 +1,4 @@
-angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+angular.module('sampleApp', ['ngRoute', 'MainCtrl', 'NerdCtrl', 'NerdService', 'GeekCtrl', 'GeekService','ngTouch']).config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 
 	$routeProvider
 

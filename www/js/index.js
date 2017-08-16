@@ -20,6 +20,11 @@ var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
+         angular.element(document).ready(function () {
+
+            angular.bootstrap(document, ["sampleApp"]);
+
+        });
     },
     // Bind Event Listeners
     //
@@ -27,29 +32,21 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+        document.addEventListener('load', this.onDeviceReady, false);
     },
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        app.receivedEvent('deviceready');
-        console.log("device Ready")
+        
+        console.log("device Ready");
          angular.element(document).ready(function () {
 
-            angular.bootstrap(document, ["ngView"]);
+            angular.bootstrap(document, ["sampleApp"]);
 
         });
     },
     // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
-    }
+    
 };

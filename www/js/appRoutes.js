@@ -1,4 +1,4 @@
-angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', $compileProvider, function($routeProvider, $locationProvider, $compileProvider) {
 
 	$routeProvider
 
@@ -17,7 +17,7 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 			templateUrl: 'views/geek.html',
 			controller: 'GeekController'	
 		});
-
+	$compileProvider.urlSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|tel):/);
 	$locationProvider.html5Mode(true);
 
 }]);

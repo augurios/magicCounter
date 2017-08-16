@@ -34,22 +34,15 @@
 	<script src="android_asset/www/js/services/GeekService.js"></script>
 	<script src="android_asset/www/js/appRoutes.js"></script>
 	<script src="android_asset/www/js/app.js"></script>
+	<script src="android_asset/www/js/index.js"></script>
+	
+	<script type="text/javascript">
+        app.initialize();
+    </script>
 </head>
-<body ng-app="sampleApp" ng-controller="NerdController">
+<body ng-app="sampleApp" ng-controller="MainCtrl">
 
 	
-	<!-- HEADER 
-	<nav class="navbar navbar-inverse">
-		<div class="navbar-header">
-			<a class="navbar-brand" href="/">Stencil: Node and Angular</a>
-		</div>
-		<ul class="nav navbar-nav">
-			<li><a href="/nerds">Nerds</a></li>
-			<li><a href="/geeks">Geeks</a></li>
-		</ul>
-	</nav> -->
-
-	<!-- ANGULAR DYNAMIC CONTENT -->
 	<div ng-view></div>
 
 

@@ -37,7 +37,7 @@ var app = {
         console.log("device Ready")
          angular.element(document).ready(function () {
 
-            angular.bootstrap(document, ["sampleApp"]);
+            angular.bootstrap(document, ["ngView"]);
 
         });
     },

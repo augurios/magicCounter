@@ -33,7 +33,7 @@
         
     </head>
     <body>
-        <div class="app-body">
+        <div class="app-body" id="deviceready">
            
 
             <div ng-view></div>
@@ -56,8 +56,7 @@
         <script type="text/javascript" src="js/controllers.js"></script>
         <script type="text/javascript">
             app.initialize();
-            
-            window.plugins.powerManagement.acquire();
+            window.powermanagement.acquire();
         </script>
     </body>
 </html>

@@ -174,5 +174,21 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "nl.x-services.plugins.insomnia": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-insomnia@4.1.0"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-powermanagement": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-powermanagement"
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }

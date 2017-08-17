@@ -610,6 +610,22 @@ module.exports = [
         "clobbers": [
             "AppVersion"
         ]
+    },
+    {
+        "file": "plugins/nl.x-services.plugins.insomnia/www/Insomnia.js",
+        "id": "nl.x-services.plugins.insomnia.Insomnia",
+        "pluginId": "nl.x-services.plugins.insomnia",
+        "clobbers": [
+            "window.plugins.insomnia"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-powermanagement/www/powermanagement.js",
+        "id": "cordova-plugin-powermanagement.powermanagement",
+        "pluginId": "cordova-plugin-powermanagement",
+        "clobbers": [
+            "window.powermanagement"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -636,7 +652,9 @@ module.exports.metadata =
     "cordova-plugin-statusbar": "2.1.3",
     "cordova-plugin-vibration": "2.1.5",
     "cordova-plugin-whitelist": "1.2.2",
-    "cordova-plugin-appversion": "1.0.0"
+    "cordova-plugin-appversion": "1.0.0",
+    "nl.x-services.plugins.insomnia": "4.1.0",
+    "cordova-plugin-powermanagement": "1.0.5"
 }
 // BOTTOM OF METADATA
 });

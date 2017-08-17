@@ -66,6 +66,12 @@
         },
         "cordova-plugin-appversion": {
             "PACKAGE_NAME": "com.disruptive.magiccounter"
+        },
+        "nl.x-services.plugins.insomnia": {
+            "PACKAGE_NAME": "com.disruptive.magiccounter"
+        },
+        "cordova-plugin-powermanagement": {
+            "PACKAGE_NAME": "com.disruptive.magiccounter"
         }
     },
     "dependent_plugins": {

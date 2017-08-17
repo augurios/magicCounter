@@ -63,6 +63,9 @@
         },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "pro.disruptive.magiccounter"
+        },
+        "cordova-plugin-appversion": {
+            "PACKAGE_NAME": "com.disruptive.magiccounter"
         }
     },
     "dependent_plugins": {

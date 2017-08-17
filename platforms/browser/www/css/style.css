@@ -165,8 +165,8 @@ h1,h2,h3,h4,h5 {
 	height: 1.2em;
 	text-align: center;
 	margin-bottom: 0.1em;
-	background: url(../images/life-bg.svg) no-repeat center center;
-	background-size: 100% 111%;
+	background: url(../images/life-bg.png) no-repeat center center;
+	background-size: 100% 105%;
 	color: #fff;
 	position: relative;
 	z-index: 40;
@@ -177,7 +177,7 @@ h1,h2,h3,h4,h5 {
 	font-size: 28px;
 	width: 50%;
 	float:left;
-	background: #000;
+	background: #343434;
 	padding: 0 6%;
 	border: 0;
 	position: absolute;
@@ -188,10 +188,12 @@ h1,h2,h3,h4,h5 {
 	color: #fff;
 	border: 2px solid rgba(192, 142, 47, 0.81);
 	outline: none;
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.45);
 }
 
 .lifecounter button:active {
 	opacity: 0.8;
+	box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.45);
 }
 
 .lifecounter .minus {
@@ -244,8 +246,10 @@ h1,h2,h3,h4,h5 {
 	position: absolute;
 	right: -40px;
 	top: -10px;
-	background: url(../images/arrow.svg) no-repeat;
+	background: url(../images/arrow.png) no-repeat;
 	color: #fff;
+	background-size: 76%;
+	background-position: 23% center;
 	height: 2.7em;
 	padding: 0.8em;
 	font-size: 16px;
@@ -351,7 +355,7 @@ h1,h2,h3,h4,h5 {
 	opacity: 0.8;
 	-webkit-filter: brightness(150%);
 	filter: brightness(150%);
-	
+	box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.4);
 }
 
 .restart img {
@@ -404,6 +408,8 @@ h1,h2,h3,h4,h5 {
 	.counter a {
 		width: 2em;
 		height: 3.7em;
+		background-size: 92%;
+		background-position: 47% center;
 	}
 
 	.counter img {
@@ -456,6 +462,7 @@ h1,h2,h3,h4,h5 {
 		width: 3em;
 		height: 5.7em;
 		top: -15px;
+		background-position: 105% center;
 	}
 
 	.counter img {

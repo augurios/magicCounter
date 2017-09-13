@@ -1,5 +1,6 @@
 angular.module('mcounter.controllers', [])
     .controller('MainCtrl', ['$scope', function ($scope) {
+	    console.log("init");
         $scope.player1name = "P1";
 		$scope.player1Life = 20;
 		$scope.player1energy = 1;
@@ -11,6 +12,9 @@ angular.module('mcounter.controllers', [])
 		$scope.player2energy = 1;
 		$scope.player2poison = 1;
 		$scope.player2walker = 1;
+		
+		$scope.counterOpennedP1 = false;
+		$scope.counterOpennedP2 = false;
 		
 		var addLifeP1v = function() {
 				$scope.player1Life++;
@@ -95,11 +99,38 @@ angular.module('mcounter.controllers', [])
 		
 		$scope.openCounter = function(counterClass,wrapperClass) {
 			$("." + wrapperClass +" .counter." + counterClass ).addClass("open");
+			
+			if(wrapperClass == 'player-one') {
+				$scope.counterOpennedP1 = true;
+			} else {
+				$scope.counterOpennedP2 = true;
+			}
+			
 		}
 		
 		$scope.closeCounter = function(counterClass,wrapperClass) {
 			$("." + wrapperClass +" .counter." + counterClass ).removeClass("open");
+			
+			var siblings = $("." + wrapperClass +" .counter." + counterClass ).siblings('.open').length;
+			
+			if(wrapperClass == 'player-one' && siblings == 0) {
+				$scope.counterOpennedP1 = false;
+			} else if(siblings == 0) {
+				$scope.counterOpennedP2 = false;
+			}
 		}
+		
+		$scope.counter = function(counterClass,wrapperClass) {
+			if($("." + wrapperClass +" .counter." + counterClass ).hasClass("open")) {
+				$scope.closeCounter(counterClass,wrapperClass);
+			} else {
+				$scope.openCounter(counterClass,wrapperClass);
+			}
+			
+		}
+		
+		
+		
 		
 		$scope.restart = function() {
 			$scope.player1Life = 20;
@@ -111,18 +142,13 @@ angular.module('mcounter.controllers', [])
 			$scope.player2energy = 1;
 			$scope.player2poison = 1;
 			$scope.player2walker = 1;
+			$scope.counterOpennedP1 = false;
+			$scope.counterOpennedP2 = false;
 			$(".counter").removeClass("open");
 			
 			
 		}
 		
-		$(".counter a").click(function() {
-			if($(this).parent(".counter").hasClass("open")) {
-				$(this).parent(".counter").removeClass("open");
-			} else {
-				$(this).parent(".counter").addClass("open");
-			}
-		});
 		
 		$('.player-one .lifecounter').swipe(function( direction, offset ) {
 			if (direction.y === "down") {

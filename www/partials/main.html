@@ -9,29 +9,29 @@
 		</p>
 		</div>
 	</div>
-	<div class="counters-field">
+	<div class="counters-field" ng-class="{countering:counterOpennedP1}">
 	  <div class="counters-field-inner">
 		<div class="lifecounter">
-			<h2>{{player1Life}}</h2>
+			<h2>{{player1Life}} </h2>
 			<button class="plus" ng-click="addLifeP1()">+</button>
 			<button class="minus" ng-click="removeLifeP1()">-</button>
 		</div>
 		
 		<div class="counter-bar">
 			<div class="counter energy" ng-swipe-left="openCounter('energy','player-one')" ng-swipe-right="closeCounter('energy','player-one')">
-				<a><img src="images/energy.svg" alt=""></a>
+				<a ng-click="counter('energy','player-one')"><img src="images/energy.svg" alt=""></a>
 				<button class="plus" ng-click="addEnergyP1()">+</button>
 				<span class="count">{{player1energy}}</span>
 				<button class="minus" ng-click="removeEnergyP1()">-</button>
 			</div>
 			<div class="counter poison" ng-swipe-left="openCounter('poison','player-one')" ng-swipe-right="closeCounter('poison','player-one')">
-				<a><img src="images/poison.svg" alt=""></a>
+				<a ng-click="counter('poison','player-one')"><img src="images/poison.svg" alt=""></a>
 				<button class="plus" ng-click="addpoisonP1()">+</button>
 				<span class="count">{{player1poison}}</span>
 				<button class="minus" ng-click="removepoison()">-</button>
 			</div>
 			<div class="counter planeswalker" ng-swipe-left="openCounter('planeswalker','player-one')" ng-swipe-right="closeCounter('planeswalker','player-one')">
-				<a><img src="images/walker.svg" alt=""></a>
+				<a ng-click="counter('planeswalker','player-one')"><img src="images/walker.svg" alt=""></a>
 				<button class="plus" ng-click="addwalkerP1()">+</button>
 				<span class="count">{{player1walker}}</span>
 				<button class="minus" ng-click="removewalkerP1()">-</button>
@@ -55,7 +55,7 @@
 		</p>
 		</div>
 	</div>
-	<div class="counters-field">
+	<div class="counters-field" ng-class="{countering:counterOpennedP2}">
 	   <div class="counters-field-inner">
 		<div class="lifecounter">
 			<h2>{{player2Life}}</h2>
@@ -65,19 +65,19 @@
 		
 		<div class="counter-bar">
 			<div class="counter energy" ng-swipe-right="openCounter('energy','player-two')" ng-swipe-left="closeCounter('energy','player-two')">
-				<a><img src="images/energy.svg" alt=""></a>
+				<a ng-click="counter('energy','player-two')"><img src="images/energy.svg" alt=""></a>
 				<button class="plus" ng-click="addEnergyP2()">+</button>
 				<span class="count">{{player2energy}}</span>
 				<button class="minus" ng-click="removeEnergyP2()">-</button>
 			</div>
 			<div class="counter poison" ng-swipe-right="openCounter('poison','player-two')" ng-swipe-left="closeCounter('poison','player-two')">
-				<a><img src="images/poison.svg" alt=""></a>
+				<a ng-click="counter('poison','player-two')"><img src="images/poison.svg" alt=""></a>
 				<button class="plus" ng-click="addpoisonP2()">+</button>
 				<span class="count">{{player2poison}}</span>
 				<button class="minus" ng-click="removepoisonP2()">-</button>
 			</div>
 			<div class="counter planeswalker" ng-swipe-right="openCounter('planeswalker','player-two')" ng-swipe-left="closeCounter('planeswalker','player-two')">
-				<a><img src="images/walker.svg" alt=""></a>
+				<a ng-click="counter('planeswalker','player-two')"><img src="images/walker.svg" alt=""></a>
 				<button class="plus" ng-click="addwalkerP2()">+</button>
 				<span class="count">{{player2walker}}</span>
 				<button class="minus" ng-click="removewalkerP2()">-</button>
